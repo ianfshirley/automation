@@ -1,20 +1,19 @@
 import re
 
 
-# FIND:
-
-# context manager
 with open("assets/potential-contacts.txt", "r") as f:
-    # we logic and stuff with the file f
     text_from_file = f.read()
 
 
-# regex patterns:
+# regex patterns
+
 phone_pattern = r"(\d{3}[-\.\s]??\d{3}[-\.\s]??\d{4}|\(\d{3}\)\s*\d{3}[-\.\s]??\d{4}|\d{3}[-\.\s]??\d{4})"
 
 email_pattern = r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b"
 
-# re.findall() returns a list of matches
+
+# Format the phone numbers
+
 phone_numbers = re.findall(phone_pattern, text_from_file)
 # remove duplicates
 non_duplicate_phone_numbers = list(dict.fromkeys(phone_numbers))
@@ -29,6 +28,7 @@ for num in joined_phone_numbers:
 # insert new line between each phone number
 phone_nums_to_print = '\n'.join(formatted_phone_numbers)
 
+# format emails
 
 email_addresses = re.findall(email_pattern, text_from_file)
 non_duplicate_email_addresses = list(dict.fromkeys(email_addresses))
