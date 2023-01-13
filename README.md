@@ -3,15 +3,11 @@
 
 ### Author: Ian F. Shirley
 
-Links and Resources
-back-end server url (when applicable)
-front-end application (when applicable)
 
-Setup
-How to initialize/run your application (where applicable)
-e.g. python main.py
+#### How to initialize/run:
+- python automation.py
 
-Tests
-How do you run tests?
-Any tests of note?
-Describe any tests that you did not complete, skipped, etc
+#### Thanks/Accreditation:
+- Credit to ChatGPT for the regex patterns
+- Worked together with Matthew Gebhart for most of it
+- Thanks to Oliver Speir for some helpful hints here and there
